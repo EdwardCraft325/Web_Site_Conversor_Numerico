@@ -1,0 +1,40 @@
+<!DOCTYPE HTML > 
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Calculadora de conversión del sistema numérico</h2 >
+<p> 
+El sistema numérico de programación común puede ser binario ( base 2), 
+decimal (base 10), octal (base 8) y hexadecimal (base 16).
+Esta herramienta permite ingresar un número en cualquiera de estos
+sistemas y convertirlo a los demás.
+</p>
+
+<label>Decimal</label >
+<input id= "decimal" type="text"
+placeholder="Ej:255">
+
+<label>Octal</label >
+<input id= "octal" type="text"
+placeholder="Ej:377">   
+
+<label>Hexadecimal</label >
+<input id= "hex" type="text"
+placeholder="Ej:FF">
+
+<label>Binario</label >
+<input id= "binario" type="text"
+placeholder="Ej:11111111">
+
+<button onclick="limpiarCampos()">Limpiar</button>
+</div>
+
+<script src="conversor.js"></script>
+</body>
+</html>
