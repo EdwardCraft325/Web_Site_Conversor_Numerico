@@ -22,6 +22,13 @@ function desdeBin(bin) {
     document.getElementById("decimal").value = dec;
 }
 
+function limpiarCampos() {
+    document.getElementById("decimal").value = "";
+    document.getElementById("binario").value = "";
+    document.getElementById("octal").value = "";
+    document.getElementById("hex").value = "";
+}
+
 document.getElementById("decimal").addEventListener("input", e => {
     let val = e.target.value;
     if (val !== "") desdeDecimal(parseInt(val));
