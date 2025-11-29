@@ -1,40 +1,96 @@
-<!DOCTYPE HTML > 
+<!DOCTYPE HTML>
 <html lang="es">
 <head> 
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Logoz</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
-<div class="container">
-
-<h2>Calculadora de conversión del sistema numérico</h2 >
-<p> 
-El sistema numérico de programación común puede ser binario ( base 2), 
-decimal (base 10), octal (base 8) y hexadecimal (base 16).
-Esta herramienta permite ingresar un número en cualquiera de estos
-sistemas y convertirlo a los demás.
-</p>
-
-<label>Decimal</label >
-<input id= "decimal" type="text"
-placeholder="Ej:255">
-
-<label>Octal</label >
-<input id= "octal" type="text"
-placeholder="Ej:377">   
-
-<label>Hexadecimal</label >
-<input id= "hex" type="text"
-placeholder="Ej:FF">
-
-<label>Binario</label >
-<input id= "binario" type="text"
-placeholder="Ej:11111111">
-
-<button onclick="limpiarCampos()">Limpiar</button>
+  <div class="bubbles-container">
+    <div class="bubble" style="left:5%; width:40px; height:40px; animation-duration:10s,4s;"></div>
+    <div class="bubble" style="left:15%; width:25px; height:25px; animation-duration:12s,3s;"></div>
+    <div class="bubble" style="left:30%; width:60px; height:60px; animation-duration:15s,5s;"></div>
+    <div class="bubble" style="left:45%; width:35px; height:35px; animation-duration:9s,4s;"></div>
+    <div class="bubble" style="left:55%; width:50px; height:50px; animation-duration:13s,6s;"></div>
+    <div class="bubble" style="left:70%; width:30px; height:30px; animation-duration:11s,3s;"></div>
+    <div class="bubble" style="left:80%; width:65px; height:65px; animation-duration:16s,5s;"></div>
+    <div class="bubble" style="left:90%; width:20px; height:20px; animation-duration:9s,2.5s;"></div>
 </div>
+<header class="header-fixed">
 
-<script src="script.js" defer></script>
+  <!-- LOGO IZQUIERDO -->
+  <div class="logo-left">
+    <img src="imagenes/logoz.png" alt="Logo Izquierdo">
+    <span class="brand">Zeled Labs</span>
+  </div>
+
+<!-- TÍTULO CENTRADO -->
+  <div class="header-title">
+    Conversor de Sistemas Numéricos
+  </div>
+
+  <!-- BOTÓN HAMBURGUESA DERECHA -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- PANEL DEL MENÚ -->
+  <div class="menu-overlay" id="menuOverlay">
+    <ul>
+      <li><a href="#">Zeled Labs</a></li>
+      <li>
+        <h3>Información</h3>
+        <p>Instituto: ITSMT</p>
+        <p>Desarrollado por: Zeled Labs</p>
+      </li>
+      <li>
+        <h3>Contacto</h3>
+        <p>Email: zeledlabs@gmail.com</p>
+      </li>
+    </ul>
+  </div>
+
+</header>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">CONVERSOR DE SISTEMAS NUMÉRICOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page">
+    <div class="container">
+      <h2>Calculadora de conversión del sistema numérico</h2>
+      <p> 
+        Los sistemas numéricos de programación más comunes pueden ser binario
+        (base 2), decimal (base 10), octal (base 8) y hexadecimal (base 16).
+        Esta herramienta permite convertir entre ellos fácilmente.
+      </p>
+
+      <label>Decimal</label>
+      <input id="decimal" type="text" placeholder="Ej:255">
+
+      <label>Octal</label>
+      <input id="octal" type="text" placeholder="Ej:377">   
+
+      <label>Hexadecimal</label>
+      <input id="hex" type="text" placeholder="Ej:FF">
+
+      <label>Binario</label>
+      <input id="binario" type="text" placeholder="Ej:11111111">
+
+      <button onclick="limpiarCampos()">Limpiar</button>
+    </div>
+
+  <footer class="footer">
+    <p>copyright© 2025 Zeled Labs - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="conversor.js"></script>
+
+
 </body>
 </html>
