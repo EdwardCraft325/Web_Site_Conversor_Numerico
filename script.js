@@ -48,3 +48,15 @@ document.getElementById("binario").addEventListener("input", e => {
     let val = e.target.value;
     if (val !== "") desdeBin(val);
 });
+function toggleMenu() {
+    document.getElementById("sidemenu").classList.toggle("open");}
+
+    const hamburger = document.getElementById('hamburger');
+const menuOverlay = document.getElementById('menuOverlay');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  menuOverlay.classList.toggle('open');
+});
+function toggleMenu() {
+    document.getElementById("sidemenu").classList.toggle("open");}
