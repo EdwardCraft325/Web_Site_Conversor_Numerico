@@ -1,4 +1,6 @@
 function desdeDecimal(dec) {
+    if (isNaN(dec)) return;
+
     document.getElementById("binario").value = dec.toString(2);
     document.getElementById("octal").value = dec.toString(8);
     document.getElementById("hex").value = dec.toString(16).toUpperCase();
@@ -6,27 +8,33 @@ function desdeDecimal(dec) {
 
 function desdeOctal(oct) {
     let dec = parseInt(oct, 8);
-    desdeDecimal(dec);
+    if (isNaN(dec)) return;
+
     document.getElementById("decimal").value = dec;
+    desdeDecimal(dec);
 }
 
 function desdeHex(hex) {
     let dec = parseInt(hex, 16);
-    desdeDecimal(dec);
+    if (isNaN(dec)) return;
+
     document.getElementById("decimal").value = dec;
+    desdeDecimal(dec);
 }
 
 function desdeBin(bin) {
     let dec = parseInt(bin, 2);
-    desdeDecimal(dec);
+    if (isNaN(dec)) return;
+
     document.getElementById("decimal").value = dec;
+    desdeDecimal(dec);
 }
 
 function limpiarCampos() {
     document.getElementById("decimal").value = "";
-    document.getElementById("binario").value = "";
     document.getElementById("octal").value = "";
     document.getElementById("hex").value = "";
+    document.getElementById("binario").value = "";
 }
 
 document.getElementById("decimal").addEventListener("input", e => {
@@ -59,5 +67,3 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   menuOverlay.classList.toggle('open');
 });
-function toggleMenu() {
-    document.getElementById("sidemenu").classList.toggle("open");}
