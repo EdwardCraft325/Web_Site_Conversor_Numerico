@@ -48,6 +48,7 @@ document.getElementById("binario").addEventListener("input", e => {
     let val = e.target.value;
     if (val !== "") desdeBin(val);
 });
+
 function toggleMenu() {
     document.getElementById("sidemenu").classList.toggle("open");}
 
